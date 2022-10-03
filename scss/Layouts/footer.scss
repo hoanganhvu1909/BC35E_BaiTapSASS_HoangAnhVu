@@ -1,0 +1,142 @@
+.footer {
+    margin-top: 180px;
+    padding-top: 0px;
+  
+    background-image: url(./../../img/footer_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom -100px center;
+    @media screen and (max-width: 1280px) {
+      background-color: #aa017e;
+      padding: 0 30px;
+    }
+  
+    .container {
+    //   padding-bottom: 150px;
+      .row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+        @media screen and (max-width: 993px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 480px) {
+          display: block;
+         }
+      }
+    }
+    .row {
+      h1 {
+        @include text($text-2xl, $text-semiBold, $c4-text-light);
+        margin-bottom: 30px;
+      }
+      span {
+        @include text($text-xs, $text-regular, $c4-text-light);
+      }
+      p {
+        @include text($text-xs, $text-regular, $c4-text-light);
+        margin-bottom: -10px;
+      }
+      i {
+        color: $c4-text-light;
+      }
+      .contact {
+        i {
+          margin-right: 8px;
+        }
+        .time {
+          margin-bottom: 20px;
+        }
+        .address {
+          margin-bottom: 10px;
+        }
+        .phone {
+          margin-bottom: 10px;
+        }
+        .social {
+          i {
+            transition: all 0.5s;
+            &:hover {
+              color: $c2-text-dark;
+              cursor: pointer;
+            }
+          }
+        }
+        @media screen and (max-width: 480px) {
+          margin-bottom: 70px;
+         }
+      }
+      .link {
+        a {
+          @include text($text-xs, $text-regular, $c4-text-light);
+          transition: all 0.3s;
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+        @media screen and (max-width: 480px) {
+          margin-bottom: 70px;
+         }
+      }
+      .about {
+        a {
+          @include text($text-xs, $text-regular, $c4-text-light);
+          transition: all 0.3s;
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+        @media screen and (max-width: 480px) {
+          margin-bottom: 70px;
+         }
+      }
+      .newsletter {
+        h1 {
+          margin-bottom: 50px;
+        }
+        input {
+          margin-bottom: 5px;
+          border: 1px solid #b31b8b;
+          border-radius: 30px;
+          padding: 15px 30px;
+          background-color: #aa017e;
+          outline: none;
+          text-align: center;
+          transition: all 0.3s;
+          &::placeholder {
+            color: $c4-text-light;
+          }
+          &:focus {
+            border: 1px solid #fff;
+          }
+          @media screen and (max-width: 993px) {
+            width: 100%;
+          }
+        }
+        button {
+          transition: all 0.5s;
+          @include button(
+            #fff,
+            15px 88px,
+            transparent,
+            50px,
+            $text-xs,
+            $text-regular,
+            $c2-text-dark,
+            #aa017e,
+            $c4-text-light
+          );
+          &:hover {
+            border: 1px solid #fff;
+          }
+          @media screen and (max-width: 993px) {
+            width: 100%;
+          }
+        }
+        
+      }
+    }
+  }
+  

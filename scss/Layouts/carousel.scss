@@ -1,0 +1,50 @@
+.carousel {
+    // position: absolute;
+    // width: 100%;
+    background-image: url(../img/Violet_top_left_wave.png);
+    background-position: bottom -20px center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+  
+    // z-index: 10;
+    @media screen and (max-width: 1280px) {
+      padding: 0 15px;
+      margin-top: 40px;
+    }
+    @media screen and (max-width: 993px) {
+      margin-top: 150px;
+    }
+  
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and (max-width: 993px) {
+        display: block;
+      }
+  
+      .title {
+        h3 {
+          @include text($text-base, $text-regular, $c1-text-primary);
+        }
+        h1 {
+          @include text($text-6xl, $text-semiBold, $c2-text-dark);
+          @media screen and (max-width: 1280px) {
+            font-size: 47px;
+            font-weight: 600;
+          }
+        }
+      }
+      .about-img {
+        img {
+          @media screen and (max-width: 1280px) {
+            width: 500px;
+          }
+          @media screen and (max-width: 480px) {
+            width: 400px;
+          }
+        }
+      }
+    }
+  }

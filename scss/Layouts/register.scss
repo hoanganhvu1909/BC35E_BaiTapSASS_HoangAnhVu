@@ -1,0 +1,242 @@
+.register {
+    padding-bottom: 70px;
+    margin-top: 100px;
+    background: url(./../../img/accent_bottom_wave_01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  
+    .container {
+      .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @media screen and (max-width: 993px) {
+          display: block;
+        }
+  
+        .col-left {
+          position: relative;
+          img {
+            width: 90%;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            @media screen and (max-width: 993px) {
+              position: relative;
+              width: 60%;
+              margin-bottom: 30px;
+              
+            }
+         
+          }
+        }
+        .col-right {
+          box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+          width: 70%;
+          padding: 20px 25px 40px;
+          margin-left: 50px;
+          border-radius: 10px;
+          @media screen and (max-width: 993px) {
+            width: 90%;
+          }
+          @media screen and (max-width: 993px) {
+            width: 80%;
+          }
+          
+          
+  
+          h3 {
+            text-align: center;
+            @include text(38px, 700, $c3-text-lightdark);
+            margin-bottom: 60px;
+            @media screen and (max-width: 993px) {
+              text-align: left;
+              font-size: 30px;
+              font-weight: 600;
+            }
+          }
+          form {
+            .primary-info {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: center;
+              @media screen and (max-width: 993px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+              }
+              @media screen and (max-width: 780px) {
+                display: block;
+              }
+  
+              .name {
+                position: relative;
+                text-align: left;
+                margin-bottom: 12px;
+                i {
+                  position: absolute;
+                  top: 25%;
+                  left: 8%;
+                  color: $c1-text-primary;
+                  @media screen and (max-width: 780px) {
+                   left: 3%;
+                  }
+                }
+                input {
+                  padding: 10px 0px 10px 35px;
+                  font-size: 0.8em;
+                  border: 1px solid rgba(0, 0, 0, 0.1);
+                  border-radius: 20px;
+                  width: 90%;
+                  outline: none;
+                  &:focus {
+                    box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                    border: 1px solid rgba(0, 0, 0, 0.3);
+                  }
+                  @media screen and (max-width: 993px) {
+                    width: 95%;
+                    padding: 10px 0px 10px 55px;
+                  }
+                  @media screen and (max-width: 780px) {
+                    padding: 10px 0px 10px 45px;
+                    width: 100%;
+                   }
+                }
+              }
+              .email {
+                text-align: left;
+                margin-bottom: 12px;
+                position: relative;
+                i {
+                  position: absolute;
+                  top: 25%;
+                  left: 8%;
+                  color: $c1-text-primary;
+                  @media screen and (max-width: 780px) {
+                    left: 3%;
+                   }
+                }
+                input {
+                  padding: 10px 0px 10px 35px;
+                  font-size: 0.8em;
+                  border: 1px solid rgba(0, 0, 0, 0.1);
+                  border-radius: 20px;
+                  width: 110%;
+                  outline: none;
+                  &:focus {
+                    box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                    border: 1px solid rgba(0, 0, 0, 0.3);
+                  }
+                  @media screen and (max-width: 993px) {
+                    width: 100%;
+                    padding: 10px 0px 10px 55px;
+                  }
+                  @media screen and (max-width: 780px) {
+                    padding: 10px 0px 10px 45px;
+                   }
+                }
+              }
+            }
+          }
+          .language {
+            position: relative;
+            margin-bottom: 12px;
+            .fa-graduation-cap {
+              position: absolute;
+              top: 31%;
+              left: 3%;
+              color: $c1-text-primary;
+            }
+            .fa-angle-down {
+              position: absolute;
+              top: 31%;
+              left: 90%;
+              color: $c1-text-primary;
+            }
+  
+            select {
+              border-radius: 100px;
+              width: 100%;
+              padding: 10px 0px 10px 35px;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              font-size: 13px;
+              color: #828279;
+              appearance: none;
+              outline: none;
+              &:focus {
+                box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                border: 0.05px solid rgba(0, 0, 0, 0.3);
+              }
+              @media screen and (max-width: 993px) {
+                width: 100%;
+                padding: 10px 0px 10px 45px;
+              }
+  
+              // position: relative;
+  
+              // option{
+              //   // font-size: 1px;
+              //   // &:focus{
+              //   //   //   box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+              //   //   //   border: 0.05px solid rgba(0,0,0,.3);
+              //   //   }
+              // }
+            }
+          }
+          .message {
+            position: relative;
+            i {
+              position: absolute;
+              top: 16px;
+              left: 5%;
+              color: $c1-text-primary;
+              @media screen and (max-width: 993px) {
+                left: 3%;
+              }
+            }
+            textarea {
+              width: 100%;
+              font-size: 0.8em;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              border-radius: 20px;
+              padding: 13px 0px 10px 40px;
+              outline: none;
+              &:focus {
+                box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                border: 0.05px solid rgba(0, 0, 0, 0.3);
+              }
+              @media screen and (max-width: 993px) {
+                width: 100%;
+                padding: 10px 0px 10px 45px;
+              }
+            }
+          }
+          button {
+            margin-bottom: 45px;
+            margin-top: 30px;
+            margin-right: 10px;
+            transition: all 0.3s;
+            &:hover {
+              border: 1px solid #b61984;
+            }
+  
+            @include button(
+              $c1-bg-primary,
+              0.7em 3.5em,
+              transparent,
+              50px,
+              $text-xs,
+              $text-regular,
+              #fff,
+              #fff,
+              $c1-text-primary
+            );
+            @media screen and (max-width: 780px) {
+              width: 100%;
+             }
+          }
+        }
+      }
+    }
+  }

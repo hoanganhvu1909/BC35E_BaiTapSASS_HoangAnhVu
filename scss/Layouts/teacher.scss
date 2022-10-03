@@ -1,0 +1,69 @@
+.teacher {
+    background: url(../img/Wave_White_bottom_right_shape_01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom -50px center;
+    background-color: #dcd1f3;
+    @media screen and (max-width: 1280px) {
+      padding: 0 30px;
+    }
+    @media screen and (max-width: 993px) {
+      padding-top: 50px;
+    }
+  
+    .container {
+      .row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        @media screen and (max-width: 993px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 480px) {
+          grid-template-columns: repeat(1, 1fr);
+         }
+  
+        .col {
+          text-align: center;
+          padding: 0 0;
+          border-radius: 10px;
+          background-color: #fff;
+          transition: all 0.5s;
+          &:hover {
+            box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+          }
+  
+          .item {
+            .teacher-img {
+              overflow: hidden;
+              border-radius: 10px 10px 0 0;
+              img {
+                width: 100%;
+                display: block;
+                transition: all 1s;
+                &:hover {
+                  transform: scale(1.1, 1.1);
+                }
+              }
+            }
+  
+            .info {
+              padding: 0 20px;
+              h3 {
+                margin-top: 30px;
+                @include text(12px, $text-regular, $c1-text-primary);
+              }
+              h1 {
+                @include text(24px, $text-bold, $c3-text-lightdark);
+                padding-bottom: 10px;
+              }
+              p {
+                @include text($text-base, $text-regular, $c3-text-lightdark);
+                padding-bottom: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

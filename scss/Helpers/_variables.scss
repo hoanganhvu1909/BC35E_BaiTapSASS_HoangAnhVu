@@ -1,0 +1,54 @@
+// Tạo biến
+//color
+    //background
+    $c1-bg-primary: #b61984;
+    //text
+    $c1-text-primary: #b61984;
+    $c2-text-dark:#000;
+    $c3-text-lightdark:#191919;
+    $c4-text-light:#fff;
+
+//text
+    //fontsize
+    $text-xs:14px;
+    $text-base:16px;
+    $text-md:18px;
+    $text-xl:20px;
+    $text-2xl:22px;
+    $text-3xl:30px;
+    $text-4xl:40px;
+    $text-5xl:50px;
+    $text-6xl:60px;
+    
+    
+    //fontweight
+    $text-light:300;
+    $text-regular:500;
+    $text-semiBold:600;
+    $text-bold:800;
+
+
+//mixin
+
+@mixin text ($fz:$text-base,$fw:$text-regular,$c:$c2-text-dark){
+    font-size:$fz;
+    font-weight:$fw;
+    color:$c;
+
+}
+
+@mixin button ($bg,$pd,$b,$br,$fz,$fw,$c,$bg-hover,$c-hover){
+
+    background: $bg;
+    padding: $pd;
+    border: $br;
+    border-radius: $br;
+    cursor: pointer;
+    @include text($fz,$fw ,$c );
+    &:hover{
+      background:$bg-hover ;
+      color:$c-hover ;
+    
+    }
+    
+  }

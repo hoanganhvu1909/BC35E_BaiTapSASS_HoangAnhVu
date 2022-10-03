@@ -1,0 +1,130 @@
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+   
+  
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        margin-right: 130px;
+        img {
+          width: 80px;
+        }
+      }
+      .nav {
+        padding: 0 0 0 100px;
+        a {
+          position: relative;
+          margin-right: 20px;
+          text-decoration: none;
+          @include text($text-xs, $text-regular, $c2-text-dark);
+  
+          &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: $c1-bg-primary;
+            position: absolute;
+            left: 45%;
+            bottom: -30px;
+            display: none;
+  
+            transition: all .5s;
+          }
+          &:hover {
+            color: $c1-text-primary;
+  
+            &::after {
+              display: block;
+              transform: scale(1, 1);
+            }
+          }
+        }
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+      }
+      .contact {
+        button {
+          transition: all 0.3s;
+          margin-left: -50px;
+          margin-right: 10px;
+          @include button(
+            $c1-bg-primary,
+            0.8em 1.5em,
+            transparent,
+            50px,
+            $text-xs,
+            $text-regular,
+            #fff,
+            #fff,
+            $c1-text-primary
+          );
+          &:hover {
+            border: 1px solid #b61984;
+          }
+  
+          i {
+            margin-right: 5px;
+          }
+        }
+        i {
+          font-size: $text-xs;
+          margin-right: 8px;
+          &:hover {
+            color: $c1-text-primary;
+            cursor: pointer;
+          }
+        }
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+      }
+  
+      @media screen and (max-width: 1280px) {
+        .logo {
+          display: flex;
+          align-items: center;
+          height: 60px;
+  
+          &::before {
+            content: "\f0c9";
+            font-family: "FontAwesome";
+            font-size: 30px;
+            margin-left: 30%;
+            color: $c2-text-dark;
+            visibility: visible;
+          }
+  
+          img {
+            margin-left: 20%;
+            height: 48px;
+            width: 55px;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1280px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 60px;
+      width: 100%;
+      background-color: #fff;
+      vertical-align: middle;
+    }
+  }
+  .scroll-header {
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgb(204 204 204 / 50%);
+  
+  }
